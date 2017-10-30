@@ -33,7 +33,7 @@ class Tox(TestCommand):
 
 
 setup(
-    name='django-data-models',
+    name='drf-swagger-yaml',
     version=__version__,
     packages=['drf_swagger_yaml'],
     include_package_data=True,
@@ -42,7 +42,7 @@ setup(
     author='Konstantin Liuterovich',
     author_email='konstantinliuterovich@gmail.com',
     description='Django\'s Drf swagger yaml',
-    install_requires=["django>=1.8,<1.11", "psycopg2>=2.6.2", 'pyyaml'],
+    install_requires=["django>=1.8,<1.11", 'djangorestframework', 'pyyaml'],
     tests_require=["tox", "pyyaml"],
     cmdclass={'test': Tox},
 )
