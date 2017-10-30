@@ -43,13 +43,8 @@ def generate_version():
     push = raw_input('Do you want to push it to origin? YES/no: ')
 
     if (push or 'YES').lower() == 'yes':
-        deploy = raw_input('Do you want to deploy it to pypi? YES/no: ')
-
         subprocess.check_output(["git", 'push'])
         subprocess.check_output(["git", 'push', '--tags'])
-
-        if (deploy or 'YES').lower() == 'yes':
-            subprocess.check_output(["python", 'setup.py',])
     else:
         print 'Push it to origin with "git push --tags"'
 
