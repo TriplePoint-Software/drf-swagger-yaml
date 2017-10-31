@@ -9,5 +9,4 @@ class DRFSwaggerYamlViewTests(TestCase):
 
     def test_model_viewset(self):
         response = self.client.get(reverse('swagger-yaml'))
-
         self.assertEqual(response.status_code, 200)
